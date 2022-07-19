@@ -34,7 +34,7 @@
         //alert("Please enter a valid email address")
         email.style.border = "5px solid red";
         email.focus();
-        return true;
+        return false;
       }
       else {
         email.style.border = "5px solid green";
