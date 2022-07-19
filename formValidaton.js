@@ -9,7 +9,7 @@ emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 function validationForm() {
   //var lowerCaseLetters = /[a-z]/g;
-  if (username.value =="" || !nameRegex.test(username.value)) {
+  if (username.value == "" || !nameRegex.test(username.value)) {
     alert("Please enter your name with alphabets only");
     username.style.border = "5px solid red";
     //username.innerHTML = "Please enter your name";
@@ -31,18 +31,24 @@ function validationForm() {
     email.style.border = "5px solid green";
     email.focus();
   }
-
-  if (email.value.indexOf("@", 0) < 0 || email.value.indexOf(".", 0) < 0) {
+  if (email.value == "" || !emailRegex.test(email.value)) {
     //alert("Please enter a valid email address")
     email.style.border = "5px solid red";
     email.focus();
     return false;
   }
-  else {
-    email.style.border = "5px solid green";
-    email.focus();
-  }
-
+  /*
+    if (email.value.indexOf("@", 0) < 0 || email.value.indexOf(".", 0) < 0) {
+      //alert("Please enter a valid email address")
+      email.style.border = "5px solid red";
+      email.focus();
+      return false;
+    }
+    else {
+      email.style.border = "5px solid green";
+      email.focus();
+    }
+  */
   if (pwd.value == "") {
     //alert("Please enter your email");
     pwd.style.border = "5px solid red";
