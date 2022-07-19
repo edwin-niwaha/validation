@@ -59,6 +59,16 @@ function validationForm() {
     pwd.style.border = "5px solid green";
     pwd.focus();
   }
+      if (email.value.indexOf("@", 0) < 0 || email.value.indexOf(".", 0) < 0) {
+        //alert("Please enter a valid email address")
+        email.style.border = "5px solid red";
+        email.focus();
+        return false;
+      }
+      else {
+        email.style.border = "5px solid green";
+        email.focus();
+      }
 
   if (phone.value == "" || phone.value.length != 10) {
     // alert("Please enter a valid phone number");
@@ -71,4 +81,29 @@ function validationForm() {
     email.focus();
   }
 
+<<<<<<< HEAD
 }
+=======
+      if (phone.value == "" || phone.value.length != 10) {
+        // alert("Please enter a valid phone number");
+        phone.style.border = "5px solid red";
+        phone.focus();
+        return false;
+      }
+      else {
+        phone.style.border = "5px solid green";
+        email.focus();
+      }
+
+      if (ddlanguages == "") {
+        // alert("Please select an option");
+        ddlanguages.style.border = "5px solid red";
+        ddlanguages.focus();
+        return false;
+      }
+      else {
+        ddlanguages.style.border = "5px solid green";
+        ddlanguages.focus();
+      }
+    }
+>>>>>>> d8b7135e42e4e9d870ba25dc078c62f6ac72474a
